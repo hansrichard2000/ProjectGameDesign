@@ -5,30 +5,32 @@ using UnityEngine.UI;
 
 public class AllyCastle : MonoBehaviour
 {
-    public Text textbox;
+    public Text hpValue;
     public float health = 100f;
     public float score;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        textbox = GetComponent<Text>();
+        hpValue.text = "HP: " + health;
     }
 
     // Update is called once per frame
     void Update()
     {
-        textbox.text = "HP: " + health;
 
-        if(health <= 0)
-        {
-            Destroy(gameObject);
-        }
     }
 
-    void minHealth(float dmg)
+    public void minHealth(float dmg)
     {
         health -= dmg;
+
+        hpValue.text = "HP: " + health;
+
+        //hancurin kastil kalau nyawa habis
+        if (health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

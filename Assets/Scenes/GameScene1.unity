@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa1e6c3f133610040a6da19acd83f818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpValue: {fileID: 374352606}
   health: 100
   score: 0
 --- !u!4 &360078598 stripped
@@ -374,7 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa1e6c3f133610040a6da19acd83f818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textbox: {fileID: 0}
+  hpValue: {fileID: 0}
   health: 99
   score: 0
 --- !u!1 &519420028
@@ -1278,6 +1279,7 @@ MonoBehaviour:
   - {fileID: 275995096715132763, guid: 5b26c9d4fd9a00f408b7e8b34ed9ee2c, type: 3}
   positionX: 0
   positionY: 0
+  allyCastle: {fileID: 0}
 --- !u!1001 &2141771967
 PrefabInstance:
   m_ObjectHideFlags: 0

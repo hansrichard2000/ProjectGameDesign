@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyDeath : MonoBehaviour
 {
+
+    public AllyCastle allyCastle;
+
     /*private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "AllyCastle")
@@ -30,7 +33,7 @@ public class EnemyDeath : MonoBehaviour
         if (collision.collider.tag == "AllyCastle")
         {
             Destroy(this.gameObject);
-
+            allyCastle.minHealth(7);
         }
     }
 }
