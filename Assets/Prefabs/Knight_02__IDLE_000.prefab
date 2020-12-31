@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8936743157049931560}
   - component: {fileID: 8148293982427733718}
   - component: {fileID: 4881032996167234801}
+  - component: {fileID: 7460702106149395842}
+  - component: {fileID: 5740777131881570326}
   m_Layer: 0
   m_Name: Knight_02__IDLE_000
   m_TagString: Untagged
@@ -101,3 +103,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7460702106149395842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509848932168032617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05af4dfedf34af54abd0139e91843cf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: []
+  positionX: 0
+  positionY: 0
+--- !u!70 &5740777131881570326
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509848932168032617}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.13, y: 0.6}
+  m_Size: {x: 2.61, y: 5.7}
+  m_Direction: 0
