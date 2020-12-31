@@ -8,6 +8,8 @@ public class AllyCastle : MonoBehaviour
     public Text textbox;
     public float health = 100f;
     public float score;
+
+
     // Start is called before the first frame update
     void Start()
     {
