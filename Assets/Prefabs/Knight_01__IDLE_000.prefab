@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6372074083961326372}
   - component: {fileID: 1766208640324376676}
-  - component: {fileID: 5377747266323963707}
+  - component: {fileID: 2877003512265462437}
   m_Layer: 0
   m_Name: Knight_01__IDLE_000
   m_TagString: Untagged
@@ -82,15 +82,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5377747266323963707
-MonoBehaviour:
+--- !u!95 &2877003512265462437
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9106521204458373913}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f21d313155b8664408f0c4b7abd7dfa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 45acc3f3941a29d4c9c2930921661ca1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

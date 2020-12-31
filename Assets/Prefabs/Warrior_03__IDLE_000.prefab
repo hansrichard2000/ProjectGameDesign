@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3545251639245524281}
   - component: {fileID: 4414561968079383581}
-  - component: {fileID: -8246905379596262660}
+  - component: {fileID: 8108320813243811858}
   m_Layer: 0
   m_Name: Warrior_03__IDLE_000
   m_TagString: Untagged
@@ -82,15 +82,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-8246905379596262660
-MonoBehaviour:
+--- !u!95 &8108320813243811858
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3563191739422089548}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9985e92b8c21f724da02d57c1a473419, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8acf02eb51956a54aad1522e35e056d2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
