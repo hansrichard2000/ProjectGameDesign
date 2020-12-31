@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AllyCastle : MonoBehaviour
 {
+    
+    public float health = 100f;
+    public float score;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +17,10 @@ public class AllyCastle : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void minHealth(float dmg)
+    {
+        health -= dmg;
     }
 }
