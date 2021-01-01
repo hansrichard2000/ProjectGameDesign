@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 63793515186498722}
   - component: {fileID: 891613422740446207}
   - component: {fileID: 1566476976250227909}
+  - component: {fileID: 4908885319015024291}
   m_Layer: 0
   m_Name: AttackRange
   m_TagString: AttackRange
@@ -71,6 +72,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1268533542766025937}
+--- !u!50 &4908885319015024291
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382180214588144475}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &8334067725089168132
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,4 +240,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCastle: {fileID: 0}
-  animator: {fileID: 1268533542766025937}
