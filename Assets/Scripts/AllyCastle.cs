@@ -20,7 +20,7 @@ public class AllyCastle : MonoBehaviour
     void Update()
     {
 
-        hpValue.text = "HP: " + health;
+        //hpValue.text = "HP: " + health;
     }
 
     public void minHealth(float dmg)
