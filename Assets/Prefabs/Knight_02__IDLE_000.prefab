@@ -236,8 +236,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 4881032996167234801}
   enemyMovement: {fileID: 7222686517940551268}
-  knight2: {fileID: 0}
-  damage: 20
+  knight2: {fileID: 509848932168032617}
+  damage: 5
   warrior1: {fileID: 8334067725089168132, guid: 21734466a16eee64ab9fef9ae5775f7f,
     type: 3}
   warrior2: {fileID: 635939466613131739, guid: 5cd3458405ac05d41864794a8a4337af, type: 3}

@@ -59,14 +59,16 @@ public class Warrior1 : MonoBehaviour
                 AttackTimer(collision);
 
             }
-            else if (this.name == "Knight_02__IDLE_000(Clone)")
+            else if (collision.collider.name == "Knight_02__IDLE_000(Clone)")
             {
                 //collision.collider.GetComponent<Warrior2>().health -= damage;
+                AttackTimer(collision);
 
             }
-            else if (this.name == "Knight_03__IDLE_000(Clone)")
+            else if (collision.collider.name == "Knight_03__IDLE_000(Clone)")
             {
                 //collision.collider.GetComponent<Warrior3>().health -= damage;
+                AttackTimer(collision);
 
             }
         }
@@ -84,9 +86,21 @@ public class Warrior1 : MonoBehaviour
         }
     }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        Walk();
+    }
+    void Walk()
+    {
+        animator.ResetTrigger("Attack");
+        animator.SetFloat("Speed", 0.03f);
+        allyMovement.GetComponent<AllyMovement>().speed = 0.03f;
+    }
+
     void Attack()
     {
         animator.SetTrigger("Attack");
+        animator.SetFloat("Speed", 0f);
     }
 
     void StopMoving()
@@ -98,8 +112,24 @@ public class Warrior1 : MonoBehaviour
         //cuma bisa attack kalau status attacknya false
         if (attack_status == false)
         {
-            //attack trus status attacknya di true
-            collision.collider.GetComponent<Knight1_Health>().health -= damage;
+            if (collision.collider.name == "Knight_01__IDLE_000(Clone)")
+            {
+                //attack trus status attacknya di true
+                collision.collider.GetComponent<Knight1_Health>().health -= damage;
+
+            }
+            else if (collision.collider.name == "Knight_02__IDLE_000(Clone)")
+            {
+                //attack trus status attacknya di true
+                collision.collider.GetComponent<Knight2_Health>().health -= damage;
+
+            }
+            else if (collision.collider.name == "Knight_03__IDLE_000(Clone)")
+            {
+                //attack trus status attacknya di true
+                collision.collider.GetComponent<Knight3_Health>().health -= damage;
+
+            }
             attack_status = true;
 
         }
