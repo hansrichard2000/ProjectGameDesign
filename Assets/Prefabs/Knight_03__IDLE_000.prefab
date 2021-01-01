@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4908005101260475502}
   - component: {fileID: 8060362922426244440}
   - component: {fileID: 6728044673815840712}
-  - component: {fileID: -3999786872755741329}
   - component: {fileID: 5952132751617041329}
   - component: {fileID: 4515534771921990762}
   - component: {fileID: 6379406312623277531}
@@ -105,21 +104,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-3999786872755741329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275995096715132763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05af4dfedf34af54abd0139e91843cf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: []
-  positionX: 0
-  positionY: 0
 --- !u!70 &5952132751617041329
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -161,3 +145,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21d313155b8664408f0c4b7abd7dfa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allyCastle: {fileID: 0}

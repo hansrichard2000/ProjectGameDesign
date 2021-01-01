@@ -7,6 +7,8 @@ public class AllySpawn : MonoBehaviour
     public GameObject[] ally;
     public float positionX, positionY;
 
+    public EnemyCastle enemyCastle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,7 @@ public class AllySpawn : MonoBehaviour
         positionY = Random.Range(-2.75f, -3.75f);
 
         var newAlly = Instantiate(ally[Random.Range(0, ally.Length)]);
+        newAlly.GetComponent<AllyDeath>().enemyCastle = this.enemyCastle;
         newAlly.transform.position = new Vector3(positionX, positionY, 0);
     }
 }
