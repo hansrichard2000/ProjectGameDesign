@@ -5,35 +5,38 @@ using UnityEngine;
 public class EnemyDeath : MonoBehaviour
 {
 
+    public float health, damage;
+
     public AllyCastle allyCastle;
 
-    /*private void OnCollisionEnter(Collision collision)
+    private void Start()
     {
-        if (collision.collider.tag == "AllyCastle")
-        {
-            Destroy(this.gameObject);
-        }
-    }*/
 
-    /*private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "AllyCastle")
+        if (this.name == "Knight_01__IDLE_000(Clone)")
         {
-            Destroy(this.gameObject);
+            health = 3;
+            damage = 1;
         }
-    }*/
+        else if (this.name == "Knight_02__IDLE_000(Clone)")
+        {
+            health = 2;
+            damage = 2;
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Destroy(this.gameObject);
-    }*/
+        }
+        else if (this.name == "Knight_03__IDLE_000(Clone)")
+        {
+            health = 1;
+            damage = 3;
+
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "AllyCastle")
         {
             Destroy(this.gameObject);
-            allyCastle.minHealth(7);
+            allyCastle.minHealth(damage);
         }
     }
 }

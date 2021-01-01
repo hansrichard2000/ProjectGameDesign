@@ -174,7 +174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6524820327797373168}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.99, y: 0.8, z: -3.9787679}
+  m_LocalPosition: {x: -4.45, y: 0.8, z: -3.9787679}
   m_LocalScale: {x: 2.8571427, y: 2.8571427, z: 1}
   m_Children: []
   m_Father: {fileID: 4908005101260475502}
@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6728044673815840712}
+  enemyMovement: {fileID: 4515534771921990762}
 --- !u!50 &4323770863348888276
 Rigidbody2D:
   serializedVersion: 4
@@ -239,4 +240,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7

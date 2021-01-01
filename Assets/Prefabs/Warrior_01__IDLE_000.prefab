@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382180214588144475}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9092047, y: 0.46772546, z: -3.9787679}
+  m_LocalPosition: {x: 2.52, y: 0.46772546, z: -3.9787679}
   m_LocalScale: {x: 5.7142854, y: 5.7142854, z: 1}
   m_Children: []
   m_Father: {fileID: 4638560125949919136}
@@ -72,6 +72,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1268533542766025937}
+  allyMovement: {fileID: 8858494410621633088}
+  warrior1: {fileID: 8334067725089168132}
+  damage: 5
 --- !u!50 &4908885319015024291
 Rigidbody2D:
   serializedVersion: 4
@@ -92,7 +95,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &8334067725089168132
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +110,7 @@ GameObject:
   - component: {fileID: 234310414342343823}
   - component: {fileID: 8858494410621633088}
   - component: {fileID: 4099418503583862178}
+  - component: {fileID: 8153756246141468895}
   m_Layer: 0
   m_Name: Warrior_01__IDLE_000
   m_TagString: Ally
@@ -239,4 +243,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9985e92b8c21f724da02d57c1a473419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
+  damage: 0
   enemyCastle: {fileID: 0}
+--- !u!114 &8153756246141468895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8334067725089168132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81acb133cda7634ebc690cd2dd282ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100

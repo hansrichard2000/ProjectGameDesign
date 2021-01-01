@@ -27,7 +27,8 @@ public class AllySpawn : MonoBehaviour
     void SpawnAlly()
     {
         positionX = Random.Range(-2.5f, -1.5f);
-        positionY = Random.Range(-2.75f, -3.75f);
+        positionY = -3f;
+        //positionY = Random.Range(-3.45f, -3.55f);
 
         var newAlly = Instantiate(ally[Random.Range(0, ally.Length)]);
         newAlly.GetComponent<AllyDeath>().enemyCastle = this.enemyCastle;

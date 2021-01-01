@@ -5,6 +5,7 @@ using UnityEngine;
 public class Knight2 : MonoBehaviour
 {
     public Animator animator;
+    public EnemyMovement enemyMovement;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class Knight2 : MonoBehaviour
         if (collision.collider.tag == "Ally")
         {
             Attack();
+            StopMoving();
             //allyCastle.minHealth(7);
         }
     }
@@ -31,5 +33,10 @@ public class Knight2 : MonoBehaviour
     void Attack()
     {
         animator.SetTrigger("Attack");
+    }
+
+    void StopMoving()
+    {
+        enemyMovement.GetComponent<EnemyMovement>().speed = 0;
     }
 }

@@ -20,6 +20,7 @@ public class AllyCastle : MonoBehaviour
     void Update()
     {
 
+        hpValue.text = "HP: " + health;
     }
 
     public void minHealth(float dmg)
@@ -34,7 +35,9 @@ public class AllyCastle : MonoBehaviour
             Destroy(this.gameObject);
             GameOver();
         }
+    
     }
+    
 
     public void GameOver()
     {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Warrior2 : MonoBehaviour
 {
     public Animator animator;
+    public AllyMovement allyMovement;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class Warrior2 : MonoBehaviour
         if (collision.collider.tag == "Enemy")
         {
             Attack();
+            StopMoving();
             //allyCastle.minHealth(7);
         }
     }
@@ -31,5 +33,10 @@ public class Warrior2 : MonoBehaviour
     void Attack()
     {
         animator.SetTrigger("Attack");
+    }
+
+    void StopMoving()
+    {
+        allyMovement.GetComponent<AllyMovement>().speed = 0;
     }
 }

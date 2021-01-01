@@ -7,6 +7,7 @@ public class EnemySpawn : MonoBehaviour
     public GameObject[] enemy;
     public float positionX, positionY;
 
+
     public AllyCastle allyCastle;
 
     // Start is called before the first frame update
@@ -26,7 +27,8 @@ public class EnemySpawn : MonoBehaviour
     void SpawnEnemy()
     {
         positionX = Random.Range(20.5f, 21.5f);
-        positionY = Random.Range(-2.75f, -3.75f);
+        positionY = -3f;
+        //positionY = Random.Range(-2.75f, -3.75f);
 
         var newEnemy = Instantiate(enemy[Random.Range(0, enemy.Length)]);
         newEnemy.GetComponent<EnemyDeath>().allyCastle = this.allyCastle;
