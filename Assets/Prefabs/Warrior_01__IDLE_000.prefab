@@ -75,6 +75,12 @@ MonoBehaviour:
   allyMovement: {fileID: 8858494410621633088}
   warrior1: {fileID: 8334067725089168132}
   damage: 5
+  knight1: {fileID: 9106521204458373913, guid: ecad37cf1d667b5408c30415dab274a3, type: 3}
+  knight2: {fileID: 509848932168032617, guid: e8be4ec42dadf9e46a6b3aea6f9f533c, type: 3}
+  knight3: {fileID: 275995096715132763, guid: 5b26c9d4fd9a00f408b7e8b34ed9ee2c, type: 3}
+  timer: 0
+  seconds: 0
+  attack_status: 0
 --- !u!50 &4908885319015024291
 Rigidbody2D:
   serializedVersion: 4

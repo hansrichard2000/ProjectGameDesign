@@ -238,9 +238,11 @@ MonoBehaviour:
   enemyMovement: {fileID: 4515534771921990762}
   knight3: {fileID: 0}
   damage: 20
-  warrior1: {fileID: 0}
-  warrior2: {fileID: 0}
-  warrior3: {fileID: 0}
+  warrior1: {fileID: 8334067725089168132, guid: 21734466a16eee64ab9fef9ae5775f7f,
+    type: 3}
+  warrior2: {fileID: 635939466613131739, guid: 5cd3458405ac05d41864794a8a4337af, type: 3}
+  warrior3: {fileID: 3563191739422089548, guid: 0e531984dfc1d8143b61c9718b84cd45,
+    type: 3}
   timer: 0
   seconds: 0
   attack_status: 0

@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c543727b6d5d34e8f20a1e86a14904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &3982825708915695285
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,6 +236,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1591882416361484614}
   allyMovement: {fileID: 8302586742890814641}
+  warrior2: {fileID: 0}
+  damage: 20
+  knight1: {fileID: 9106521204458373913, guid: ecad37cf1d667b5408c30415dab274a3, type: 3}
+  knight2: {fileID: 509848932168032617, guid: e8be4ec42dadf9e46a6b3aea6f9f533c, type: 3}
+  knight3: {fileID: 275995096715132763, guid: 5b26c9d4fd9a00f408b7e8b34ed9ee2c, type: 3}
+  timer: 0
+  seconds: 0
+  attack_status: 0
 --- !u!50 &6509370046642354716
 Rigidbody2D:
   serializedVersion: 4

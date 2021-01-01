@@ -100,14 +100,14 @@ public class Knight3 : MonoBehaviour
         if (attack_status == false)
         {
             //attack trus status attacknya di true
-            collision.collider.GetComponent<Warrior1_Health>().health -= damage;
+            collision.collider.GetComponent<Warrior3_Health>().health -= damage;
             attack_status = true;
 
         }
 
         //DEBUG MAI BEIBEHHH
-        //print("collision :" + collision.collider.GetComponent<Warrior1_Health>().health);
-        //print("sec : " + seconds);
-        //print("time : " + timer);
+        print("collision :" + collision.collider.GetComponent<Knight3_Health>().health);
+        print("sec : " + seconds);
+        print("time : " + timer);
     }
 }
