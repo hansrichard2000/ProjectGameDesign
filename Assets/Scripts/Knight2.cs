@@ -2,25 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Warrior1 : MonoBehaviour
+public class Knight2 : MonoBehaviour
 {
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "EnemySpawn")
+        print(collision.collider.name);
+        if (collision.collider.tag == "Ally")
         {
-            //Destroy(this.gameObject);
+            Attack();
             //allyCastle.minHealth(7);
         }
+    }
+
+    void Attack()
+    {
+        animator.SetTrigger("Attack");
     }
 }
