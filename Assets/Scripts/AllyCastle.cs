@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AllyCastle : MonoBehaviour
@@ -31,6 +32,12 @@ public class AllyCastle : MonoBehaviour
         if (health <= 0)
         {
             Destroy(this.gameObject);
+            GameOver();
         }
+    }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOverScene");
     }
 }
