@@ -73,11 +73,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 2877003512265462437}
   enemyMovement: {fileID: 2880783808209869126}
-  allyCastle: {fileID: 0}
-  health: 40
+  knight1: {fileID: 0}
   damage: 20
   warrior1: {fileID: 8334067725089168132, guid: 21734466a16eee64ab9fef9ae5775f7f,
     type: 3}
+  warrior2: {fileID: 0}
+  warrior3: {fileID: 0}
+  timer: 0
+  seconds: 0
+  attack_status: 0
 --- !u!50 &4152322928849478519
 Rigidbody2D:
   serializedVersion: 4
@@ -113,6 +117,7 @@ GameObject:
   - component: {fileID: 2562560939381525819}
   - component: {fileID: 2880783808209869126}
   - component: {fileID: 4401543592573769842}
+  - component: {fileID: 6449449028580450211}
   m_Layer: 0
   m_Name: Knight_01__IDLE_000
   m_TagString: Enemy
@@ -248,3 +253,16 @@ MonoBehaviour:
   health: 0
   damage: 0
   allyCastle: {fileID: 0}
+--- !u!114 &6449449028580450211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9106521204458373913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9de488468ba841641880803dcc49a627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
