@@ -54,6 +54,7 @@ public class Warrior3 : MonoBehaviour
 
         if (hitEnemies.Length > 0)
         {
+            StopMoving();
             //print("masih ada lawan");
         }
         else
@@ -97,7 +98,7 @@ public class Warrior3 : MonoBehaviour
         if (collision.collider.tag == "Enemy")
         {
             Attack();
-            StopMoving();
+            //StopMoving();
 
             //allyCastle.minHealth(7);
         }

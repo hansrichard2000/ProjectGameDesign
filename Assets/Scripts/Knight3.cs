@@ -54,6 +54,7 @@ public class Knight3 : MonoBehaviour
 
         if (hitEnemies.Length > 0)
         {
+            StopMoving();
             //print("masih ada lawan");
         }
         else
@@ -97,7 +98,7 @@ public class Knight3 : MonoBehaviour
         if (collision.collider.tag == "Ally")
         {
             Attack();
-            StopMoving();
+            //StopMoving();
             //allyCastle.minHealth(7);
         }
     }
