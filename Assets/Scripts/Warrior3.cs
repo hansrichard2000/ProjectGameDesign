@@ -137,8 +137,8 @@ public class Warrior3 : MonoBehaviour
         }
 
         //DEBUG MAI BEIBEHHH
-        print("collision :" + collision.collider.GetComponent<Warrior3_Health>().health);
-        print("sec : " + seconds);
-        print("time : " + timer);
+        //print("collision :" + collision.collider.GetComponent<Warrior3_Health>().health);
+        //print("sec : " + seconds);
+        //print("time : " + timer);
     }
 }
