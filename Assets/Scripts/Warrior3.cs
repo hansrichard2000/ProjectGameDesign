@@ -123,11 +123,11 @@ public class Warrior3 : MonoBehaviour
     void Attack()
     {
         animator.SetTrigger("Attack");
-        animator.SetFloat("Speed", 0f);
     }
 
     void StopMoving()
     {
+        animator.SetFloat("Speed", 0f);
         allyMovement.GetComponent<AllyMovement>().speed = 0;
     }
 

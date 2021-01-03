@@ -5,15 +5,20 @@ using UnityEngine;
 public class Warrior1 : MonoBehaviour
 {
 
+    //animasi movement
     public Animator animator;
     public AllyMovement allyMovement;
-    public GameObject warrior1;
 
+    //lupa buat apa :v untuk get component keknya
+    public GameObject warrior1;
+    
+    //buat ngedeteksi kalau masih ada lawan
     public Transform AttackPoint;
     public float AttackRange;
     public LayerMask enemyLayers;
 
-    public float damage = 5;//sesuain dmg
+    //damage heronya
+    public float damage = 5;
 
     //buat ngurangi attribut nyawa lawannya
     public GameObject knight1;
@@ -49,9 +54,10 @@ public class Warrior1 : MonoBehaviour
             attack_status = false;
         }
 
-        //Cek lawan
+        //Cek apa masih ada collision dengan lawan
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPoint.position, AttackRange, enemyLayers);
 
+        //kalau masih ada, tetap berhenti jalan, kalau gak ada jalan lagi
         if (hitEnemies.Length > 0)
         {
             //Attack();
@@ -123,11 +129,11 @@ public class Warrior1 : MonoBehaviour
     void Attack()
     {
         animator.SetTrigger("Attack");
-        animator.SetFloat("Speed", 0f);
     }
 
     void StopMoving()
     {
+        animator.SetFloat("Speed", 0f);
         allyMovement.GetComponent<AllyMovement>().speed = 0;
     }
     void AttackTimer(Collision2D collision)

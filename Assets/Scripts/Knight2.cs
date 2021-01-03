@@ -119,11 +119,11 @@ public class Knight2 : MonoBehaviour
     void Attack()
     {
         animator.SetTrigger("Attack");
-        animator.SetFloat("Speed", 0f);
     }
 
     void StopMoving()
     {
+        animator.SetFloat("Speed", 0f);
         enemyMovement.GetComponent<EnemyMovement>().speed = 0;
     }
 
