@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4515534771921990762}
   - component: {fileID: 6379406312623277531}
   - component: {fileID: 3878366859080807123}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Knight_03__IDLE_000
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -34,6 +34,7 @@ Transform:
   m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_Children:
   - {fileID: 9103331084881765557}
+  - {fileID: 6715534877983518921}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -163,6 +164,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+--- !u!1 &732004095186426063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6715534877983518921}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6715534877983518921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732004095186426063}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.48, y: 0.30034745, z: -19.157282}
+  m_LocalScale: {x: 2.8571427, y: 2.8571427, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4908005101260475502}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6524820327797373168
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +268,11 @@ MonoBehaviour:
   animator: {fileID: 6728044673815840712}
   enemyMovement: {fileID: 4515534771921990762}
   knight3: {fileID: 275995096715132763}
+  AttackPoint: {fileID: 6715534877983518921}
+  AttackRange: 1.04
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 512
   damage: 5
   warrior1: {fileID: 8334067725089168132, guid: 21734466a16eee64ab9fef9ae5775f7f,
     type: 3}

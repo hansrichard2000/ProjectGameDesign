@@ -9,6 +9,10 @@ public class Warrior1 : MonoBehaviour
     public AllyMovement allyMovement;
     public GameObject warrior1;
 
+    public Transform AttackPoint;
+    public float AttackRange;
+    public LayerMask enemyLayers;
+
     public float damage = 5;//sesuain dmg
 
     //buat ngurangi attribut nyawa lawannya
@@ -43,6 +47,18 @@ public class Warrior1 : MonoBehaviour
             timer = 0f;
 
             attack_status = false;
+        }
+
+        //Cek lawan
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPoint.position, AttackRange, enemyLayers);
+
+        if (hitEnemies.Length > 0)
+        {
+            //print("masih ada lawan");
+        }
+        else
+        {
+            Walk();
         }
     }
 
@@ -88,7 +104,12 @@ public class Warrior1 : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        Walk();
+    }
+
+    //untuk ngecek range dari physics 2d di atas
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(AttackPoint.position, AttackRange);
     }
     void Walk()
     {

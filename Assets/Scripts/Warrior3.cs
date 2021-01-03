@@ -9,6 +9,10 @@ public class Warrior3 : MonoBehaviour
     //buat ambil attribute dia sendiri
     public GameObject warrior3;
 
+    public Transform AttackPoint;
+    public float AttackRange;
+    public LayerMask enemyLayers;
+
     public float damage = 5;
 
     //buat ngurangi attribut nyawa lawannya
@@ -43,6 +47,18 @@ public class Warrior3 : MonoBehaviour
             timer = 0f;
 
             attack_status = false;
+        }
+
+        //Cek lawan
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPoint.position, AttackRange, enemyLayers);
+
+        if (hitEnemies.Length > 0)
+        {
+            //print("masih ada lawan");
+        }
+        else
+        {
+            Walk();
         }
     }
 
@@ -89,7 +105,12 @@ public class Warrior3 : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        Walk();
+    }
+
+    //untuk ngecek range dari physics 2d di atas
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(AttackPoint.position, AttackRange);
     }
     void Walk()
     {

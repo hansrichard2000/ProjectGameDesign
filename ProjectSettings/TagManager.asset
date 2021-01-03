@@ -8,6 +8,7 @@ TagManager:
   - EnemyCastle
   - Ally
   - Enemy
+  - AttackRange
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Enemy
+  - Ally
   - 
   - 
   - 
