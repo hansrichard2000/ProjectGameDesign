@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class EnemyCastle : MonoBehaviour
 {
+    //tidak terpakai
     public Text hpValue;
     public float health = 100f;
     public float score;
