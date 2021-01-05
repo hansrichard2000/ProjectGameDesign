@@ -11,11 +11,12 @@ public class AllyCastle : MonoBehaviour
     public float score;
 
     public EnemySpawn levelSpawn;
+    public Sprite castle50;
 
     // Start is called before the first frame update
     void Start()
     {
-        hpValue.text = "HP: " + health;
+        //hpValue.text = "HP: " + health;
     }
 
     // Update is called once per frame
@@ -23,6 +24,10 @@ public class AllyCastle : MonoBehaviour
     {
 
         //hpValue.text = "HP: " + health;
+        if (health <= 50)
+        {
+            this.GetComponent<SpriteRenderer>().sprite = castle50;
+        }
     }
 
     public void minHealth(float dmg)

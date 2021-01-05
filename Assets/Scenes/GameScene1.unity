@@ -561,6 +561,7 @@ MonoBehaviour:
   health: 100
   score: 0
   levelSpawn: {fileID: 0}
+  castle50: {fileID: 21300000, guid: 06ea3c37950008e4bb8ac38884c3beac, type: 3}
 --- !u!4 &360078598 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7115281630523257998, guid: 1b112cc6e7addb644b75f25d7922a552,
@@ -661,6 +662,7 @@ MonoBehaviour:
   health: 99
   score: 0
   levelSpawn: {fileID: 0}
+  castle50: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,6 +1069,7 @@ MonoBehaviour:
   health: 99
   score: 0
   levelSpawn: {fileID: 0}
+  castle50: {fileID: 0}
 --- !u!114 &917472815
 MonoBehaviour:
   m_ObjectHideFlags: 0
