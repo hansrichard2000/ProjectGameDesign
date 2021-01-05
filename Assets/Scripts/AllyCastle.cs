@@ -8,8 +8,8 @@ public class AllyCastle : MonoBehaviour
 {
     public Text hpValue;
     public float health = 100f;
-    public float score;
 
+    public ScoringSystem scoringSystem;
     public EnemySpawn levelSpawn;
     public Sprite castle50;
 
@@ -48,6 +48,7 @@ public class AllyCastle : MonoBehaviour
 
     public void GameOver()
     {
+        PlayerPrefs.SetInt("MyScore", scoringSystem.score);
         SceneManager.LoadScene("GameOverScene");
     }
 }
