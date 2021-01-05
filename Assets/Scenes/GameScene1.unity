@@ -1868,6 +1868,7 @@ MonoBehaviour:
   positionX: 0
   positionY: 0
   allyCastle: {fileID: 270774464}
+  enemySpawn: {fileID: 1851492869}
 --- !u!1 &1941402184
 GameObject:
   m_ObjectHideFlags: 0

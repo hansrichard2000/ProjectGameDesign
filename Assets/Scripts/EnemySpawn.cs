@@ -10,6 +10,7 @@ public class EnemySpawn : MonoBehaviour
     int enemyDeadCounter = 0;
 
     public AllyCastle allyCastle;
+    public EnemySpawn enemySpawn;
 
     // Start is called before the first frame update
     void Start()
@@ -41,9 +42,24 @@ public class EnemySpawn : MonoBehaviour
         positionX = Random.Range(20.5f, 21.5f);
         positionY = -3f;
         //positionY = Random.Range(-2.75f, -3.75f);
+        int random = Random.Range(0, enemy.Length);
 
-        var newEnemy = Instantiate(enemy[Random.Range(0, enemy.Length)]);
+        var newEnemy = Instantiate(enemy[random]);
         newEnemy.GetComponent<EnemyDeath>().allyCastle = this.allyCastle;
+        if (random == 0)
+        {
+            //print("enemy 1 spawn");
+            newEnemy.GetComponent<Knight1_Health>().levelSpawn = this.enemySpawn;
+        } else if (random == 1)
+        {
+            //print("enemy 2 spawn");
+            newEnemy.GetComponent<Knight2_Health>().levelSpawn = this.enemySpawn;
+        } else if (random == 2)
+        {
+            //print("enemy 3 spawn");
+            newEnemy.GetComponent<Knight3_Health>().levelSpawn = this.enemySpawn;
+        }
+        
         newEnemy.transform.position = new Vector3(positionX, positionY, 0);
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Knight1_Health : MonoBehaviour
 {
+    public EnemySpawn levelSpawn;
     public float health = 100f;
   
     // Start is called before the first frame update
@@ -19,7 +20,7 @@ public class Knight1_Health : MonoBehaviour
         if (health <= 0)
         {
             Destroy(this.gameObject);
-            GetComponent<EnemySpawn>().EnemyDead();
+            levelSpawn.EnemyDead();
         }
     }
 }
