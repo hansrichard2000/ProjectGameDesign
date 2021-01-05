@@ -10,6 +10,8 @@ public class AllyCastle : MonoBehaviour
     public float health = 100f;
     public float score;
 
+    public EnemySpawn levelSpawn;
+
     // Start is called before the first frame update
     void Start()
     {

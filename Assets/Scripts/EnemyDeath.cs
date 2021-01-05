@@ -9,6 +9,8 @@ public class EnemyDeath : MonoBehaviour
 
     public AllyCastle allyCastle;
 
+    public EnemySpawn levelSpawn;
+
     private void Start()
     {
 
@@ -37,6 +39,7 @@ public class EnemyDeath : MonoBehaviour
         {
             Destroy(this.gameObject);
             allyCastle.minHealth(damage);
+            levelSpawn.EnemyDead();
         }
     }
 }
