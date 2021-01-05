@@ -39,13 +39,14 @@ public class EnemySpawn : MonoBehaviour
 
     void SpawnEnemy()
     {
-        positionX = Random.Range(20.5f, 21.5f);
+        positionX = Random.Range(30.5f, 34.5f);
         positionY = -3f;
         //positionY = Random.Range(-2.75f, -3.75f);
         int random = Random.Range(0, enemy.Length);
 
         var newEnemy = Instantiate(enemy[random]);
         newEnemy.GetComponent<EnemyDeath>().allyCastle = this.allyCastle;
+        newEnemy.GetComponent<EnemyDeath>().levelSpawn = this.enemySpawn;
         if (random == 0)
         {
             //print("enemy 1 spawn");
