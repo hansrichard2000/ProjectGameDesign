@@ -54,11 +54,21 @@ public class AllySpawn : MonoBehaviour
 
     public void SpawnWarrior2()
     {
-        SpawnAlly(1);
+        if (ScoringSystem.score > priceWarrior2)
+        {
+            ScoringSystem.score -= priceWarrior2;
+            ScoringSystem.ScoreChange();
+            SpawnAlly(1);
+        }
     }
 
     public void SpawnWarrior3()
     {
-        SpawnAlly(2);
+        if (ScoringSystem.score > priceWarrior3)
+        {
+            ScoringSystem.score -= priceWarrior3;
+            ScoringSystem.ScoreChange();
+            SpawnAlly(2);
+        }
     }
 }
