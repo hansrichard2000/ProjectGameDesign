@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyDeath : MonoBehaviour
 {
 
-    public float health, damage;
+    public float damage;
 
     public AllyCastle allyCastle;
 
@@ -16,18 +16,15 @@ public class EnemyDeath : MonoBehaviour
 
         if (this.name == "Knight_01__IDLE_000(Clone)")
         {
-            health = 3;
             damage = 1;
         }
         else if (this.name == "Knight_02__IDLE_000(Clone)")
         {
-            health = 2;
             damage = 2;
 
         }
         else if (this.name == "Knight_03__IDLE_000(Clone)")
         {
-            health = 1;
             damage = 3;
 
         }

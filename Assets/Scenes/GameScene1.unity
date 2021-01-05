@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 113329345}
   - component: {fileID: 113329344}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Warrior3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,7 +202,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 113329345}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 922643346}
+        m_MethodName: SpawnWarrior3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &113329345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,7 +274,7 @@ GameObject:
   - component: {fileID: 217326944}
   - component: {fileID: 217326943}
   m_Layer: 5
-  m_Name: Panel2
+  m_Name: ScoreUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -471,6 +482,7 @@ MonoBehaviour:
   hpValue: {fileID: 374352606}
   health: 100
   score: 0
+  levelSpawn: {fileID: 0}
 --- !u!4 &360078598 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7115281630523257998, guid: 1b112cc6e7addb644b75f25d7922a552,
@@ -570,6 +582,7 @@ MonoBehaviour:
   hpValue: {fileID: 0}
   health: 99
   score: 0
+  levelSpawn: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,6 +909,7 @@ MonoBehaviour:
   hpValue: {fileID: 0}
   health: 99
   score: 0
+  levelSpawn: {fileID: 0}
 --- !u!114 &917472815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1073,7 +1087,7 @@ GameObject:
   - component: {fileID: 1199732751}
   - component: {fileID: 1199732750}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Warrior2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1141,7 +1155,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1199732751}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 922643346}
+        m_MethodName: SpawnWarrior2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1199732751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1190,7 +1215,7 @@ GameObject:
   - component: {fileID: 1373241956}
   - component: {fileID: 1373241955}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: HPUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1639,7 +1664,7 @@ GameObject:
   - component: {fileID: 1758938123}
   - component: {fileID: 1758938122}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Warrior1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1707,7 +1732,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1758938123}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 922643346}
+        m_MethodName: SpawnWarrior1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1758938123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1881,7 +1917,7 @@ GameObject:
   - component: {fileID: 1941402187}
   - component: {fileID: 1941402186}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: SpawnUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

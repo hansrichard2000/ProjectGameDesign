@@ -5,7 +5,7 @@ using UnityEngine;
 public class Knight1_Health : MonoBehaviour
 {
     public EnemySpawn levelSpawn;
-    public float health = 100f;
+    public float health = 50f;
   
     // Start is called before the first frame update
     void Start()

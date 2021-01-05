@@ -13,7 +13,7 @@ public class Warrior3 : MonoBehaviour
     public float AttackRange;
     public LayerMask enemyLayers;
 
-    public float damage = 5;
+    public float damage = 10;
 
     //buat ngurangi attribut nyawa lawannya
     public GameObject knight1;

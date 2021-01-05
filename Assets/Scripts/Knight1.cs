@@ -14,7 +14,7 @@ public class Knight1 : MonoBehaviour
     public float AttackRange;
     public LayerMask enemyLayers;
 
-    public float damage = 5;
+    public float damage = 8;
 
     //buat ngurangi attribut nyawa lawannya
     public GameObject warrior1;

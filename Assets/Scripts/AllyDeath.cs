@@ -33,7 +33,6 @@ public class AllyDeath : MonoBehaviour
         if (collision.collider.tag == "EnemyCastle")
         {
             Destroy(this.gameObject);
-            enemyCastle.minHealth(damage);
 
         }
     }
