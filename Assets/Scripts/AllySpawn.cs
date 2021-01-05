@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AllySpawn : MonoBehaviour
 {
     public GameObject[] ally;
     public float positionX, positionY;
     public ScoringSystem ScoringSystem;
-
+    public Text notificationText;
     private int priceWarrior1 = 50;
     private int priceWarrior2 = 75;
     private int priceWarrior3 = 100;
@@ -44,31 +45,50 @@ public class AllySpawn : MonoBehaviour
 
     public void SpawnWarrior1()
     {
-        if (ScoringSystem.score > priceWarrior1)
+        if (ScoringSystem.score >= priceWarrior1)
         {
             ScoringSystem.score -= priceWarrior1;
             ScoringSystem.ScoreChange();
             SpawnAlly(0);
         }
+        else
+        {
+            StartCoroutine(SendNotification("Insufficient Money", 1.5f));
+        }
     }
 
     public void SpawnWarrior2()
     {
-        if (ScoringSystem.score > priceWarrior2)
+        if (ScoringSystem.score >= priceWarrior2)
         {
             ScoringSystem.score -= priceWarrior2;
             ScoringSystem.ScoreChange();
             SpawnAlly(1);
         }
+        else
+        {
+            StartCoroutine(SendNotification("Insufficient Money", 1.5f));
+        }
     }
 
     public void SpawnWarrior3()
     {
-        if (ScoringSystem.score > priceWarrior3)
+        if (ScoringSystem.score >= priceWarrior3)
         {
             ScoringSystem.score -= priceWarrior3;
             ScoringSystem.ScoreChange();
             SpawnAlly(2);
         }
+        else
+        {
+            StartCoroutine(SendNotification("Insufficient Money", 1.5f));
+        }
+    }
+
+    IEnumerator SendNotification(string text, float time)
+    {
+        notificationText.text = text;
+        yield return new WaitForSeconds(time);
+        notificationText.text = "";
     }
 }
