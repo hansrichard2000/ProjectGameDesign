@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemySpawn : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class EnemySpawn : MonoBehaviour
     int level = 1;
     int stage = 1;
     int enemyDeadCounter = 0;
+
+    public Text levelStage;
 
     public AllyCastle allyCastle;
     public EnemySpawn enemySpawn;
@@ -101,11 +104,14 @@ public class EnemySpawn : MonoBehaviour
         if (enemyDeadCounter == level)
         {
             stage++;
+
             if(stage > 3)
             {
-                stage = 0;
+                stage = 1;
                 level++;
             }
+
+            levelStage.text = "Level " + level + "-" + stage;
             StartLevel();
         }
 

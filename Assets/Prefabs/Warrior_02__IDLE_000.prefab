@@ -148,8 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9985e92b8c21f724da02d57c1a473419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  damage: 0
   enemyCastle: {fileID: 0}
 --- !u!114 &2430469902558174594
 MonoBehaviour:
@@ -243,7 +241,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
-  damage: 8
+  damage: 5
   knight1: {fileID: 9106521204458373913, guid: ecad37cf1d667b5408c30415dab274a3, type: 3}
   knight2: {fileID: 509848932168032617, guid: e8be4ec42dadf9e46a6b3aea6f9f533c, type: 3}
   knight3: {fileID: 275995096715132763, guid: 5b26c9d4fd9a00f408b7e8b34ed9ee2c, type: 3}

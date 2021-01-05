@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ScoringSystem : MonoBehaviour
 {
     public Text scoreValue;
-    public int score = 0;
+    public int score = 250;
     //buat timer
     public float timer = 0f;
     public int seconds;
@@ -26,14 +26,18 @@ public class ScoringSystem : MonoBehaviour
         // turn seconds in float to int
         seconds = (int)(timer % 60);
 
-        if (seconds >= 1)
+        if (seconds >= 2)
         {
             seconds = 0;
             timer = 0;
             score += 5;
-            scoreValue.text = "Score: " + score;
+            ScoreChange();
         }
 
+    }
+    public void ScoreChange()
+    {
+        scoreValue.text = "Score: " + score;
     }
 
 }

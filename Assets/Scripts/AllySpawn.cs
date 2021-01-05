@@ -6,8 +6,13 @@ public class AllySpawn : MonoBehaviour
 {
     public GameObject[] ally;
     public float positionX, positionY;
+    public ScoringSystem ScoringSystem;
 
-    public EnemyCastle enemyCastle;
+    private int priceWarrior1 = 50;
+    private int priceWarrior2 = 75;
+    private int priceWarrior3 = 100;
+
+    //public EnemyCastle enemyCastle;
 
     // Start is called before the first frame update
     void Start()
@@ -33,13 +38,18 @@ public class AllySpawn : MonoBehaviour
         //positionY = Random.Range(-3.45f, -3.55f);
 
         var newAlly = Instantiate(ally[id]);
-        newAlly.GetComponent<AllyDeath>().enemyCastle = this.enemyCastle;
+        //newAlly.GetComponent<AllyDeath>().enemyCastle = this.enemyCastle;
         newAlly.transform.position = new Vector3(positionX, positionY, 0);
     }
 
     public void SpawnWarrior1()
     {
-        SpawnAlly(0);
+        if (ScoringSystem.score > priceWarrior1)
+        {
+            ScoringSystem.score -= priceWarrior1;
+            ScoringSystem.ScoreChange();
+            SpawnAlly(0);
+        }
     }
 
     public void SpawnWarrior2()
