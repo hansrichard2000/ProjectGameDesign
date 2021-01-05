@@ -5,6 +5,7 @@ using UnityEngine;
 public class Knight1_Health : MonoBehaviour
 {
     public float health = 100f;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class Knight1_Health : MonoBehaviour
         if (health <= 0)
         {
             Destroy(this.gameObject);
+            GetComponent<EnemySpawn>().EnemyDead();
         }
     }
 }

@@ -12,7 +12,7 @@ public class EnemyCastle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hpValue.text = "HP: " + health;
+        /*hpValue.text = "HP: " + health;*/
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class EnemyCastle : MonoBehaviour
     {
         health -= dmg;
 
-        hpValue.text = "HP: " + health;
+        /*hpValue.text = "HP: " + health;*/
 
         //hancurin kastil kalau nyawa habis
         if (health <= 0)
