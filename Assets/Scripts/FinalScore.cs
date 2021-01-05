@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class FinalScore : MonoBehaviour
 {
-    public Text myscore;
-    public Text highscore;
+    public Text Score;
 
     // Start is called before the first frame update
     void Start()
@@ -16,8 +15,10 @@ public class FinalScore : MonoBehaviour
             PlayerPrefs.SetInt("HighScore", PlayerPrefs.GetInt("MyScore"));
         }
 
-        highscore.text = "Highscore : " + PlayerPrefs.GetInt("HighScore", 0).ToString();
-        myscore.text = "Score : " + PlayerPrefs.GetInt("MyScore", 0).ToString();
+        //Kalau mau bersihin high score
+        //PlayerPrefs.SetInt("HighScore", 0);
+
+        Score.text = "Score : " + PlayerPrefs.GetInt("MyScore", 0).ToString() + " | Highscore : " + PlayerPrefs.GetInt("HighScore", 0).ToString();
     }
 
 }
