@@ -7,6 +7,7 @@ public class EnemySpawn : MonoBehaviour
     public GameObject[] enemy;
     public float positionX, positionY;
     int level = 1;
+    int stage = 1;
     int enemyDeadCounter = 0;
 
     public AllyCastle allyCastle;
@@ -49,16 +50,45 @@ public class EnemySpawn : MonoBehaviour
         newEnemy.GetComponent<EnemyDeath>().levelSpawn = this.enemySpawn;
         if (random == 0)
         {
-            //print("enemy 1 spawn");
             newEnemy.GetComponent<Knight1_Health>().levelSpawn = this.enemySpawn;
+
+            //buat tambah nyawa per stage
+            if ( stage == 2)
+            {
+                newEnemy.GetComponent<Knight1_Health>().health += newEnemy.GetComponent<Knight1_Health>().health * 0.1f;
+            } else if (stage == 3)
+            {
+                newEnemy.GetComponent<Knight1_Health>().health += newEnemy.GetComponent<Knight1_Health>().health * 0.2f;
+            }
+
         } else if (random == 1)
         {
-            //print("enemy 2 spawn");
             newEnemy.GetComponent<Knight2_Health>().levelSpawn = this.enemySpawn;
+
+            //buat tambah nyawa per stage
+            if (stage == 2)
+            {
+                newEnemy.GetComponent<Knight2_Health>().health += newEnemy.GetComponent<Knight2_Health>().health * 0.1f;
+            }
+            else if (stage == 3)
+            {
+                newEnemy.GetComponent<Knight2_Health>().health += newEnemy.GetComponent<Knight2_Health>().health * 0.2f;
+            }
+
         } else if (random == 2)
         {
-            //print("enemy 3 spawn");
             newEnemy.GetComponent<Knight3_Health>().levelSpawn = this.enemySpawn;
+
+            //buat tambah nyawa per stage
+            if (stage == 2)
+            {
+                newEnemy.GetComponent<Knight3_Health>().health += newEnemy.GetComponent<Knight3_Health>().health * 0.1f;
+            }
+            else if (stage == 3)
+            {
+                newEnemy.GetComponent<Knight3_Health>().health += newEnemy.GetComponent<Knight3_Health>().health * 0.2f;
+            }
+
         }
         
         newEnemy.transform.position = new Vector3(positionX, positionY, 0);
@@ -70,7 +100,12 @@ public class EnemySpawn : MonoBehaviour
 
         if (enemyDeadCounter == level)
         {
-            level++;
+            stage++;
+            if(stage > 3)
+            {
+                stage = 0;
+                level++;
+            }
             StartLevel();
         }
 

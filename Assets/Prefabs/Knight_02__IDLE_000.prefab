@@ -148,9 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21d313155b8664408f0c4b7abd7dfa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
   damage: 0
   allyCastle: {fileID: 0}
+  levelSpawn: {fileID: 0}
 --- !u!114 &6676334695548731676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d46ce81c59f231949ae7d8fcaa2502e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  levelSpawn: {fileID: 0}
+  health: 75
 --- !u!1 &2892290431309724001
 GameObject:
   m_ObjectHideFlags: 0

@@ -148,9 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21d313155b8664408f0c4b7abd7dfa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
   damage: 0
   allyCastle: {fileID: 0}
+  levelSpawn: {fileID: 0}
 --- !u!114 &3878366859080807123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a1c461f751ece469ad768dba59b436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelSpawn: {fileID: 0}
   health: 100
 --- !u!1 &732004095186426063
 GameObject:
@@ -273,7 +274,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 512
-  damage: 5
+  damage: 3
   warrior1: {fileID: 8334067725089168132, guid: 21734466a16eee64ab9fef9ae5775f7f,
     type: 3}
   warrior2: {fileID: 635939466613131739, guid: 5cd3458405ac05d41864794a8a4337af, type: 3}
