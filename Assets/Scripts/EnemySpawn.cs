@@ -112,7 +112,7 @@ public class EnemySpawn : MonoBehaviour
                 level++;
             }
 
-            levelStage.text = "Level " + level + "-" + stage;
+            levelStage.text = "Wave " + level + "-" + stage;
             StartLevel();
         }
 
