@@ -30,7 +30,7 @@ public class ScoringSystem : MonoBehaviour
         {
             seconds = 0;
             timer = 0;
-            score += 5;
+            score += 15;
             ScoreChange();
         }
 
