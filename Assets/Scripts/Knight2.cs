@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Knight2 : MonoBehaviour
 {
+    //sound manager
+    public SoundManager soundManager;
+
     public Animator animator;
     public EnemyMovement enemyMovement;
     //buat ambil attribute dia sendiri
@@ -111,6 +114,7 @@ public class Knight2 : MonoBehaviour
     }
     void Walk()
     {
+        soundManager.StopSound();
         animator.ResetTrigger("Attack");
         animator.SetFloat("Speed", 0.03f);
         enemyMovement.GetComponent<EnemyMovement>().speed = 0.03f;
@@ -151,6 +155,7 @@ public class Knight2 : MonoBehaviour
 
             }
             attack_status = true;
+            soundManager.PlaySound();
 
         }
 

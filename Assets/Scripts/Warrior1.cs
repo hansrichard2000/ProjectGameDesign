@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Warrior1 : MonoBehaviour
 {
+    //sound manager
+    public SoundManager soundManager;
 
     //animasi movement
     public Animator animator;
@@ -121,7 +123,7 @@ public class Warrior1 : MonoBehaviour
     }
     void Walk()
     {
-        SoundManager.instance.StopSound();
+        soundManager.StopSound();
         animator.ResetTrigger("Attack");
         animator.SetFloat("Speed", 0.03f);
         allyMovement.GetComponent<AllyMovement>().speed = 0.03f;
@@ -129,7 +131,6 @@ public class Warrior1 : MonoBehaviour
 
     void Attack()
     {
-        SoundManager.instance.PlaySound();
         animator.SetTrigger("Attack");
     }
 
@@ -162,6 +163,7 @@ public class Warrior1 : MonoBehaviour
 
             }
             attack_status = true;
+            soundManager.PlaySound();
 
         }
 

@@ -71,6 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94500252609d6cb479b80b978dbb72fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundManager: {fileID: 6894966133755301413}
   animator: {fileID: 1268533542766025937}
   allyMovement: {fileID: 8858494410621633088}
   warrior1: {fileID: 8334067725089168132}
@@ -180,7 +181,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 913709182801a054ca5864ee21683808, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

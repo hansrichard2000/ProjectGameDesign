@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Warrior3 : MonoBehaviour
 {
+    //sound manager
+    public SoundManager soundManager;
+
     public Animator animator;
     public AllyMovement allyMovement;
     //buat ambil attribute dia sendiri
@@ -115,6 +118,7 @@ public class Warrior3 : MonoBehaviour
     }
     void Walk()
     {
+        soundManager.StopSound();
         animator.ResetTrigger("Attack");
         animator.SetFloat("Speed", 0.03f);
         allyMovement.GetComponent<AllyMovement>().speed = 0.03f;
@@ -155,6 +159,7 @@ public class Warrior3 : MonoBehaviour
 
             }
             attack_status = true;
+            soundManager.PlaySound();
 
         }
 

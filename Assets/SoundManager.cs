@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static SoundManager instance;
+    //public static SoundManager instance;
     AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
+       //instance = this;
         audioSource = GetComponent<AudioSource>();
     }
 
