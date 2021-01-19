@@ -121,6 +121,7 @@ public class Warrior1 : MonoBehaviour
     }
     void Walk()
     {
+        SoundManager.instance.StopSound();
         animator.ResetTrigger("Attack");
         animator.SetFloat("Speed", 0.03f);
         allyMovement.GetComponent<AllyMovement>().speed = 0.03f;
@@ -128,6 +129,7 @@ public class Warrior1 : MonoBehaviour
 
     void Attack()
     {
+        SoundManager.instance.PlaySound();
         animator.SetTrigger("Attack");
     }
 
